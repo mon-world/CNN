@@ -35,6 +35,7 @@ def linear_regression():
                   metrics= ['accuracy'])
 
     model.fit(x,y, epochs=100, verbose= 2)      # 0(없음) 1(전체) 2(약식)
+    model.summary()
 
     print(model.predict(x))
 
@@ -92,6 +93,6 @@ def multiple_regression_trees():
 
 
 
-# linear_regression()
+linear_regression()
 # multiple_regression()
-multiple_regression_trees()
+# multiple_regression_trees()
