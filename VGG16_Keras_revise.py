@@ -12,9 +12,6 @@ https://github.com/tensorflow/models/tree/master/research/slim
 5. 모델이 시작하는 input과 끝인 model = keras.Model를 찾는다.
 6. 코드들의 줄 정리
 '''
-# 퀴즈
-# 케라스 라이브러리에서 가져온 소스 코드를 수업 형식에 맞게 수정하고
-# summary 함수를 통해 결과를 확인하세요.
 
 from tensorflow.keras import layers
 from tensorflow import keras
