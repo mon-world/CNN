@@ -88,8 +88,7 @@ def innerud_1inputs() :
     model.fit(x, [y1, y2, y3], epochs=100, verbose=2)
     print(model.evaluate(x, [y1, y2, y3], verbose=0))
 
-    # 퀴즈
-    # predict 함수의 결과에 대해 mae 결과를 보여주세요
+    # predict 함수의 결과에 대해 mae 결과를 보이기
     p = model.predict(x)
     print(type(p), len(p))  # <class 'list'> 3
     print(type(p[0]))  # <class 'numpy.ndarray'>
