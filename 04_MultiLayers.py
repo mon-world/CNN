@@ -1,9 +1,7 @@
-# Day_02_01_MultiLayers.py
+# 레이어를 늘려서 신경망 구성하기
 import tensorflow.keras as keras
 
 
-# 퀴즈
-# mnist의 load_data 함수 반환값을 x_train, x_test, y_train, y_test로 구분하세요
 def show_mnist():
     mnist = keras.datasets.mnist.load_data()
     print(type(mnist))          # <class 'tuple'>
@@ -19,8 +17,8 @@ def show_mnist():
     print(mnist[1][0].shape, mnist[1][1].shape)     # (10000, 28, 28) (10000,)
 
 
-# 퀴즈
-# mnist 데이터셋에 대해 동작하는 딥러닝 모델을 구축하세요 (목표는 80% 이상)
+
+# mnist 데이터셋에 대해 동작하는 딥러닝 모델을 구축하기 (목표는 80% 이상)
 def mnist_softmax():
     ((x_train, y_train), (x_test, y_test)) = keras.datasets.mnist.load_data()
     # print(x_train.shape, x_test.shape)        # (60000, 28, 28) (10000, 28, 28)
@@ -44,7 +42,7 @@ def mnist_softmax():
     model.fit(x_train, y_train, epochs=10, batch_size=100, verbose=2)
     print(model.evaluate(x_test, y_test, verbose=0))
 
-
+# mnist 데이터셋에 동작하는 딥러닝 모델을 구축하기(multi layers)
 def mnist_multi_layers():
     ((x_train, y_train), (x_test, y_test)) = keras.datasets.mnist.load_data()
     # print(x_train.shape, x_test.shape)        # (60000, 28, 28) (10000, 28, 28)
@@ -77,6 +75,5 @@ def mnist_multi_layers():
 
 
 # show_mnist()
-
 # mnist_softmax()
 mnist_multi_layers()

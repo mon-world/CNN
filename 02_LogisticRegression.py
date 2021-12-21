@@ -1,15 +1,9 @@
-# Day_01_02_LogisticRegression.py
+# 간단한 logistic regression과 pima data를 통한 학습 및 예측하기
 import tensorflow.keras as keras
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 import sklearn.preprocessing as preprocessing
-
-# 딥러닝 : 리그레션(회귀), 클래시피케이션(분류)
-# 회귀 : 수치 예측에 사용.
-# 분류 : 구분에 사용.
-# cnn은 모든게 분류이므로 멀티플 리그레이션 사용 x
-
 
 def logistic_regression():
     # 공부시간 출석일수 라고 가정
@@ -49,8 +43,8 @@ def logistic_regression():
 
 def logistic_regression_pima():
     pima = pd.read_csv('data/pima-indians-diabetes.csv', skiprows=9,
-                    header= None) # header가 무조건 있다고 생각하는데,
-                                    # 없다고 알려주는 것.
+                    header= None) # header가 없다고 알려주는 것.
+
     pima.info()
     print(pima)
     x = pima.values[:, :-1]

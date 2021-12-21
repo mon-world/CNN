@@ -1,4 +1,4 @@
-# Day_02_02_LeNet5.py
+# convolution layer 사용하기
 import tensorflow.keras as keras
 
 
@@ -15,9 +15,7 @@ def lenet_5():
     x_train = x_train / 255  # minmax scale
     x_test = x_test / 255
 
-    # 앞에 들어가는 숫자는 모른다.
-    # 여러가지기 때문에 숫자를 정할 수 없다.
-    # 인풋 레이어에는 FLATTEN한 1차원을 사용한다.
+    # 인풋 레이어에는 FLATTEN한 1차원을 사용.
 
     model = keras.Sequential()
     model.add(keras.layers.InputLayer([28, 28, 1]))

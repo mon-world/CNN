@@ -1,12 +1,10 @@
-# Day_01_03_SoftmaxRegression.py
+# softmax 사용해보기
 import tensorflow.keras as keras
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing, model_selection
 
-# 딥러닝 : 리그레션(회귀), 클래시피케이션(분류)
-
-
+# activation 함수를 softmax로 적용
 def softmax_regression():
     # 공부시간 출석일수
     x = [[1, 2],        # C
@@ -46,8 +44,8 @@ def softmax_regression():
     print('acc :', np.mean(p_arg == y_arg))
 
 
-# 퀴즈
-# iris 원핫 데이터에 대해 70%로 학습하고 30%에 대해 정확도를 구하세요
+# x, y 데이터 셋에 대해 7대 3으로 나누어서
+# 학습 데이터로 학습하고 검사 데이터에 대해 정확도 구하기
 def softmax_regression_iris():
     iris = pd.read_csv('data/iris_onehot.csv')
     # print(iris)
@@ -87,7 +85,7 @@ def softmax_regression_iris():
 
     print('acc :', np.mean(p_arg == y_arg))
 
-
+# 데이터를 onehot 인코딩을 통해 데이터 전처리 하기
 def softmax_regression_iris_onehot():
     iris = pd.read_csv('data/iris.csv')
     # print(iris)
@@ -96,6 +94,7 @@ def softmax_regression_iris_onehot():
     y = iris.values[:, -1:]
     # print(x.shape, y.shape)               # (150, 4) (150, 1)
 
+    # 원 핫 인코딩
     lb = preprocessing.LabelBinarizer()
     y = lb.fit_transform(y)
     # print(y.shape)                        # (150, 3)
