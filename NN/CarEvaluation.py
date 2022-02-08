@@ -21,7 +21,7 @@ from sklearn import preprocessing, model_selection
 
 def car_model_sparse():
     # 1. 판다스로 파일 읽기
-    cars = pd.read_csv('data/car.data',
+    cars = pd.read_csv('../data/car.data',
                        header=None,
                        names=['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class'])
 
