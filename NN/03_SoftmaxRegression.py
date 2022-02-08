@@ -47,7 +47,7 @@ def softmax_regression():
 # x, y 데이터 셋에 대해 7대 3으로 나누어서
 # 학습 데이터로 학습하고 검사 데이터에 대해 정확도 구하기
 def softmax_regression_iris():
-    iris = pd.read_csv('data/iris_onehot.csv')
+    iris = pd.read_csv('../data/iris_onehot.csv')
     # print(iris)
 
     x = iris.values[:, :-3]
@@ -87,7 +87,7 @@ def softmax_regression_iris():
 
 # 데이터를 onehot 인코딩을 통해 데이터 전처리 하기
 def softmax_regression_iris_onehot():
-    iris = pd.read_csv('data/iris.csv')
+    iris = pd.read_csv('../data/iris.csv')
     # print(iris)
 
     x = iris.values[:, :-1]

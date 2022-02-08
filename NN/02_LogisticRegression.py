@@ -42,7 +42,7 @@ def logistic_regression():
     print('acc :', np.mean(equals))
 
 def logistic_regression_pima():
-    pima = pd.read_csv('data/pima-indians-diabetes.csv', skiprows=9,
+    pima = pd.read_csv('../data/pima-indians-diabetes.csv', skiprows=9,
                     header= None) # header가 없다고 알려주는 것.
 
     pima.info()

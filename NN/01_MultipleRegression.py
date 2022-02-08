@@ -52,7 +52,7 @@ def multiple_regression():  # 피쳐가 여러개 있는 경우.
 
 
 def multiple_regression_trees():
-    trees = pd.read_csv("data/trees.csv")
+    trees = pd.read_csv("../data/trees.csv")
     print(trees)
     print(trees.values)
     x = trees.values[:, :-1]
